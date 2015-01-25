@@ -8,6 +8,8 @@
 
 #import "GameScene.h"
 #import "GameOver.h"
+#import "StarField.h"
+
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
@@ -15,6 +17,10 @@
     self.shootSound = [SKAction playSoundFileNamed:@"laserbolt.mp3" waitForCompletion:NO];
     self.obstacleExplodeSound = [SKAction playSoundFileNamed:@"asteroidsplat.mp3" waitForCompletion:NO];
     self.shipExplodeSound = [SKAction playSoundFileNamed:@"shipboom2.m4a" waitForCompletion:NO];
+    
+    StarField *starField = [StarField node];
+    [self addChild:starField];
+    
     [self addSpaceship];
 }
 

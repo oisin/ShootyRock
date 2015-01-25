@@ -20,6 +20,7 @@
 		935F43C71A754E1F00B6F0C0 /* attribs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C61A754E1F00B6F0C0 /* attribs.txt */; };
 		935F43C91A754E4E00B6F0C0 /* asteroidsplat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */; };
 		935F43CB1A7553A800B6F0C0 /* shipboom2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */; };
+		935F43CE1A75551A00B6F0C0 /* StarField.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43CD1A75551A00B6F0C0 /* StarField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		935F43C61A754E1F00B6F0C0 /* attribs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribs.txt; sourceTree = "<group>"; };
 		935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asteroidsplat.mp3; sourceTree = "<group>"; };
 		935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shipboom2.m4a; sourceTree = "<group>"; };
+		935F43CC1A7554DC00B6F0C0 /* StarField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarField.h; sourceTree = "<group>"; };
+		935F43CD1A75551A00B6F0C0 /* StarField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				935F439F1A7420DC00B6F0C0 /* Images.xcassets */,
 				935F43A11A7420DC00B6F0C0 /* LaunchScreen.xib */,
 				935F438D1A7420DC00B6F0C0 /* Supporting Files */,
+				935F43CC1A7554DC00B6F0C0 /* StarField.h */,
+				935F43CD1A75551A00B6F0C0 /* StarField.m */,
 			);
 			path = Foo;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935F43CE1A75551A00B6F0C0 /* StarField.m in Sources */,
 				935F439B1A7420DC00B6F0C0 /* GameViewController.m in Sources */,
 				935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */,
 				935F43931A7420DC00B6F0C0 /* AppDelegate.m in Sources */,
