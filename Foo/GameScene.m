@@ -12,6 +12,9 @@
 
 -(void)didMoveToView:(SKView *)view {
     self.backgroundColor = [SKColor blackColor];
+    self.shootSound = [SKAction playSoundFileNamed:@"laserbolt.mp3" waitForCompletion:NO];
+    self.obstacleExplodeSound = [SKAction playSoundFileNamed:@"asteroidsplat.mp3" waitForCompletion:NO];
+    self.shipExplodeSound = [SKAction playSoundFileNamed:@"shipboom2.m4a" waitForCompletion:NO];
     [self addSpaceship];
 }
 
@@ -78,6 +81,7 @@
             self.shipTouch = nil;
             [ship removeFromParent];
             [obstacle removeFromParent];
+            [self runAction:self.shipExplodeSound];
             [self endGame];
         }
         
@@ -85,6 +89,7 @@
             if ([photon intersectsNode:obstacle]) {
                 [photon removeFromParent];
                 [obstacle removeFromParent];
+                [self runAction:self.obstacleExplodeSound];
                 *stop = YES;
             }
         }];
@@ -129,6 +134,7 @@
     SKAction *remove = [SKAction removeFromParent];
     SKAction *fireAndRemove = [SKAction sequence:@[fly, remove]];
     [photon runAction:fireAndRemove];
+    [self runAction:self.shootSound];
 }
 
 -(void)moveShipTowardPoint:(CGPoint)point byTimeDelta:(CFTimeInterval)timeDelta {

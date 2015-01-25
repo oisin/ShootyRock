@@ -16,6 +16,10 @@
 		935F43A01A7420DC00B6F0C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935F439F1A7420DC00B6F0C0 /* Images.xcassets */; };
 		935F43A31A7420DC00B6F0C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935F43A11A7420DC00B6F0C0 /* LaunchScreen.xib */; };
 		935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43B91A753CC900B6F0C0 /* GameOver.m */; };
+		935F43C31A754BD900B6F0C0 /* laserbolt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C21A754BD900B6F0C0 /* laserbolt.mp3 */; };
+		935F43C71A754E1F00B6F0C0 /* attribs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C61A754E1F00B6F0C0 /* attribs.txt */; };
+		935F43C91A754E4E00B6F0C0 /* asteroidsplat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */; };
+		935F43CB1A7553A800B6F0C0 /* shipboom2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		935F43AE1A7420DD00B6F0C0 /* FooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooTests.m; sourceTree = "<group>"; };
 		935F43B81A753C6A00B6F0C0 /* GameOver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		935F43B91A753CC900B6F0C0 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		935F43C21A754BD900B6F0C0 /* laserbolt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laserbolt.mp3; sourceTree = "<group>"; };
+		935F43C61A754E1F00B6F0C0 /* attribs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribs.txt; sourceTree = "<group>"; };
+		935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asteroidsplat.mp3; sourceTree = "<group>"; };
+		935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shipboom2.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		935F438C1A7420DC00B6F0C0 /* Foo */ = {
 			isa = PBXGroup;
 			children = (
+				935F43BB1A75497700B6F0C0 /* sounds */,
 				935F43911A7420DC00B6F0C0 /* AppDelegate.h */,
 				935F43921A7420DC00B6F0C0 /* AppDelegate.m */,
 				935F43941A7420DC00B6F0C0 /* GameScene.h */,
@@ -110,6 +119,17 @@
 				935F43AD1A7420DD00B6F0C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		935F43BB1A75497700B6F0C0 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */,
+				935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */,
+				935F43C21A754BD900B6F0C0 /* laserbolt.mp3 */,
+				935F43C61A754E1F00B6F0C0 /* attribs.txt */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +190,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935F43C31A754BD900B6F0C0 /* laserbolt.mp3 in Resources */,
+				935F43C91A754E4E00B6F0C0 /* asteroidsplat.mp3 in Resources */,
+				935F43CB1A7553A800B6F0C0 /* shipboom2.m4a in Resources */,
+				935F43C71A754E1F00B6F0C0 /* attribs.txt in Resources */,
 				935F43A31A7420DC00B6F0C0 /* LaunchScreen.xib in Resources */,
 				935F43A01A7420DC00B6F0C0 /* Images.xcassets in Resources */,
 				935F43981A7420DC00B6F0C0 /* GameScene.sks in Resources */,

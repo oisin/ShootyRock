@@ -15,4 +15,8 @@
 @property (nonatomic) CFTimeInterval lastShotFiredTime;
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
 
+@property (nonatomic, strong) SKAction *shootSound;
+@property (nonatomic, strong) SKAction *shipExplodeSound;
+@property (nonatomic, strong) SKAction *obstacleExplodeSound;
+
 @end
