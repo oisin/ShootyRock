@@ -48,7 +48,20 @@
         [self dropAsteroid];
     }
     
+    [self checkCollisions];
+    
     self.lastUpdateTime = currentTime;
+}
+
+-(void)checkCollisions {
+    SKNode *ship = [self childNodeWithName:@"ship"];
+    [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *obstacle, BOOL *stop) {
+        if ([ship intersectsNode:obstacle]) {
+            self.shipTouch = nil;
+            [ship removeFromParent];
+            [obstacle removeFromParent];
+        }
+    }];
 }
 
 -(void)dropAsteroid {
