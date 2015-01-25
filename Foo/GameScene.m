@@ -80,6 +80,14 @@
             [obstacle removeFromParent];
             [self endGame];
         }
+        
+        [self enumerateChildNodesWithName:@"photon" usingBlock:^(SKNode *photon, BOOL *stop) {
+            if ([photon intersectsNode:obstacle]) {
+                [photon removeFromParent];
+                [obstacle removeFromParent];
+                *stop = YES;
+            }
+        }];
     }];
 }
 
