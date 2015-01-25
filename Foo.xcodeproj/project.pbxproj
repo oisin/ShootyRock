@@ -15,6 +15,7 @@
 		935F439E1A7420DC00B6F0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935F439C1A7420DC00B6F0C0 /* Main.storyboard */; };
 		935F43A01A7420DC00B6F0C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935F439F1A7420DC00B6F0C0 /* Images.xcassets */; };
 		935F43A31A7420DC00B6F0C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935F43A11A7420DC00B6F0C0 /* LaunchScreen.xib */; };
+		935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43B91A753CC900B6F0C0 /* GameOver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		935F43A21A7420DC00B6F0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		935F43AD1A7420DD00B6F0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935F43AE1A7420DD00B6F0C0 /* FooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooTests.m; sourceTree = "<group>"; };
+		935F43B81A753C6A00B6F0C0 /* GameOver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		935F43B91A753CC900B6F0C0 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				935F43921A7420DC00B6F0C0 /* AppDelegate.m */,
 				935F43941A7420DC00B6F0C0 /* GameScene.h */,
 				935F43951A7420DC00B6F0C0 /* GameScene.m */,
+				935F43B81A753C6A00B6F0C0 /* GameOver.h */,
+				935F43B91A753CC900B6F0C0 /* GameOver.m */,
 				935F43971A7420DC00B6F0C0 /* GameScene.sks */,
 				935F43991A7420DC00B6F0C0 /* GameViewController.h */,
 				935F439A1A7420DC00B6F0C0 /* GameViewController.m */,
@@ -180,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935F439B1A7420DC00B6F0C0 /* GameViewController.m in Sources */,
+				935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */,
 				935F43931A7420DC00B6F0C0 /* AppDelegate.m in Sources */,
 				935F43961A7420DC00B6F0C0 /* GameScene.m in Sources */,
 				935F43901A7420DC00B6F0C0 /* main.m in Sources */,

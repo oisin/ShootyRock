@@ -13,5 +13,6 @@
 @property (nonatomic, weak) UITouch *shipTouch;
 @property (nonatomic) CFTimeInterval lastUpdateTime;
 @property (nonatomic) CFTimeInterval lastShotFiredTime;
+@property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
 
 @end

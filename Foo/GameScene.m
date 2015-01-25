@@ -7,13 +7,15 @@
 //
 
 #import "GameScene.h"
-
+#import "GameOver.h"
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
-    
     self.backgroundColor = [SKColor blackColor];
-    
+    [self addSpaceship];
+}
+
+-(void)addSpaceship {
     SKSpriteNode *ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
     ship.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     ship.size = CGSizeMake(40, 40);
@@ -53,6 +55,22 @@
     self.lastUpdateTime = currentTime;
 }
 
+-(void)endGame {
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped)];
+    [self.view addGestureRecognizer:self.tapRecognizer];
+    GameOver *go = [GameOver node];
+    go.position = CGPointMake(self.size.width / 2, self.size.height / 2);
+    go.name = @"gameover";
+    [self addChild:go];
+}
+
+-(void)tapped {
+    [self.view removeGestureRecognizer:self.tapRecognizer];
+    self.tapRecognizer = nil;
+    [[self childNodeWithName:@"gameover"] removeFromParent];
+    [self addSpaceship];
+}
+
 -(void)checkCollisions {
     SKNode *ship = [self childNodeWithName:@"ship"];
     [self enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *obstacle, BOOL *stop) {
@@ -60,6 +78,7 @@
             self.shipTouch = nil;
             [ship removeFromParent];
             [obstacle removeFromParent];
+            [self endGame];
         }
     }];
 }
