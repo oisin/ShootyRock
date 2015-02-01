@@ -9,19 +9,36 @@
 #import "GameScene.h"
 #import "GameOver.h"
 #import "StarField.h"
+#import "HUDNode.h"
 
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
-    self.backgroundColor = [SKColor blackColor];
+    
     self.shootSound = [SKAction playSoundFileNamed:@"laserbolt.mp3" waitForCompletion:NO];
     self.obstacleExplodeSound = [SKAction playSoundFileNamed:@"asteroidsplat.mp3" waitForCompletion:NO];
     self.shipExplodeSound = [SKAction playSoundFileNamed:@"shipboom2.m4a" waitForCompletion:NO];
     
+    self.backgroundColor = [SKColor blackColor];
+    self.size = view.bounds.size;
+
     StarField *starField = [StarField node];
     [self addChild:starField];
     
+    HUDNode *hud = [HUDNode node];
+    hud.name = @"hud";
+    hud.zPosition = 100;
+    hud.position = CGPointMake(self.size.width / 2, self.size.height / 2);
+    [self addChild:hud];
+    [hud layoutForScene];
+    [hud startGame];
+    
     [self addSpaceship];
+}
+
+- (void)willMoveFromView:(SKView *)view {
+    [self.view removeGestureRecognizer:self.tapRecognizer];
+    self.tapRecognizer = nil;
 }
 
 -(void)addSpaceship {
@@ -71,12 +88,18 @@
     go.position = CGPointMake(self.size.width / 2, self.size.height / 2);
     go.name = @"gameover";
     [self addChild:go];
+    
+    HUDNode *hud = (HUDNode *)[self childNodeWithName:@"hud"];
+    [hud endGame];
 }
 
 -(void)tapped {
     [self.view removeGestureRecognizer:self.tapRecognizer];
     self.tapRecognizer = nil;
     [[self childNodeWithName:@"gameover"] removeFromParent];
+    
+    HUDNode *hud = (HUDNode *)[self childNodeWithName:@"hud"];
+    [hud startGame];
     [self addSpaceship];
 }
 
@@ -96,6 +119,9 @@
                 [photon removeFromParent];
                 [obstacle removeFromParent];
                 [self runAction:self.obstacleExplodeSound];
+                HUDNode *hud = (HUDNode*)[self childNodeWithName:@"hud"];
+                NSInteger score = 10 + hud.elapsedTime;
+                [hud addPoints:score];
                 *stop = YES;
             }
         }];

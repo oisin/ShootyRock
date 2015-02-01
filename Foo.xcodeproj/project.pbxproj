@@ -21,6 +21,7 @@
 		935F43C91A754E4E00B6F0C0 /* asteroidsplat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 935F43C81A754E4E00B6F0C0 /* asteroidsplat.mp3 */; };
 		935F43CB1A7553A800B6F0C0 /* shipboom2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */; };
 		935F43CE1A75551A00B6F0C0 /* StarField.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43CD1A75551A00B6F0C0 /* StarField.m */; };
+		93D088C11A7EB72500F58512 /* HUDNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D088C01A7EB72500F58512 /* HUDNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		935F43CA1A7553A800B6F0C0 /* shipboom2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shipboom2.m4a; sourceTree = "<group>"; };
 		935F43CC1A7554DC00B6F0C0 /* StarField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarField.h; sourceTree = "<group>"; };
 		935F43CD1A75551A00B6F0C0 /* StarField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarField.m; sourceTree = "<group>"; };
+		93D088BF1A7EB6CE00F58512 /* HUDNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUDNode.h; sourceTree = "<group>"; };
+		93D088C01A7EB72500F58512 /* HUDNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				935F438D1A7420DC00B6F0C0 /* Supporting Files */,
 				935F43CC1A7554DC00B6F0C0 /* StarField.h */,
 				935F43CD1A75551A00B6F0C0 /* StarField.m */,
+				93D088BF1A7EB6CE00F58512 /* HUDNode.h */,
+				93D088C01A7EB72500F58512 /* HUDNode.m */,
 			);
 			path = Foo;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */,
 				935F43931A7420DC00B6F0C0 /* AppDelegate.m in Sources */,
 				935F43961A7420DC00B6F0C0 /* GameScene.m in Sources */,
+				93D088C11A7EB72500F58512 /* HUDNode.m in Sources */,
 				935F43901A7420DC00B6F0C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +373,7 @@
 				935F43B41A7420DD00B6F0C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
