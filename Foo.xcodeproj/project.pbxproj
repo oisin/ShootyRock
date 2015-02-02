@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9339B6B01A802D4B00C08806 /* thrust.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9339B6AE1A802D4B00C08806 /* thrust.sks */; };
+		9339B6B11A802D4B00C08806 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9339B6AF1A802D4B00C08806 /* spark.png */; };
+		9339B6B51A802ED900C08806 /* SKEmitterNode+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339B6B41A802ED900C08806 /* SKEmitterNode+Extensions.m */; };
+		9339B6B71A80317A00C08806 /* obstacleExplode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9339B6B61A80317A00C08806 /* obstacleExplode.sks */; };
+		9339B6B91A80321100C08806 /* shipExplode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9339B6B81A80321100C08806 /* shipExplode.sks */; };
 		935F43901A7420DC00B6F0C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F438F1A7420DC00B6F0C0 /* main.m */; };
 		935F43931A7420DC00B6F0C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43921A7420DC00B6F0C0 /* AppDelegate.m */; };
 		935F43961A7420DC00B6F0C0 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F43951A7420DC00B6F0C0 /* GameScene.m */; };
@@ -25,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9339B6AE1A802D4B00C08806 /* thrust.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = thrust.sks; sourceTree = "<group>"; };
+		9339B6AF1A802D4B00C08806 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		9339B6B21A802E8300C08806 /* SKEmitterNode+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+Extensions.h"; sourceTree = "<group>"; };
+		9339B6B41A802ED900C08806 /* SKEmitterNode+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+Extensions.m"; sourceTree = "<group>"; };
+		9339B6B61A80317A00C08806 /* obstacleExplode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = obstacleExplode.sks; sourceTree = "<group>"; };
+		9339B6B81A80321100C08806 /* shipExplode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = shipExplode.sks; sourceTree = "<group>"; };
 		935F438A1A7420DC00B6F0C0 /* Foo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935F438E1A7420DC00B6F0C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		935F438F1A7420DC00B6F0C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +94,8 @@
 		935F438C1A7420DC00B6F0C0 /* Foo */ = {
 			isa = PBXGroup;
 			children = (
+				9339B6AE1A802D4B00C08806 /* thrust.sks */,
+				9339B6AF1A802D4B00C08806 /* spark.png */,
 				935F43BB1A75497700B6F0C0 /* sounds */,
 				935F43911A7420DC00B6F0C0 /* AppDelegate.h */,
 				935F43921A7420DC00B6F0C0 /* AppDelegate.m */,
@@ -93,14 +106,18 @@
 				935F43971A7420DC00B6F0C0 /* GameScene.sks */,
 				935F43991A7420DC00B6F0C0 /* GameViewController.h */,
 				935F439A1A7420DC00B6F0C0 /* GameViewController.m */,
-				935F439C1A7420DC00B6F0C0 /* Main.storyboard */,
-				935F439F1A7420DC00B6F0C0 /* Images.xcassets */,
-				935F43A11A7420DC00B6F0C0 /* LaunchScreen.xib */,
-				935F438D1A7420DC00B6F0C0 /* Supporting Files */,
 				935F43CC1A7554DC00B6F0C0 /* StarField.h */,
 				935F43CD1A75551A00B6F0C0 /* StarField.m */,
 				93D088BF1A7EB6CE00F58512 /* HUDNode.h */,
 				93D088C01A7EB72500F58512 /* HUDNode.m */,
+				935F439C1A7420DC00B6F0C0 /* Main.storyboard */,
+				935F439F1A7420DC00B6F0C0 /* Images.xcassets */,
+				935F43A11A7420DC00B6F0C0 /* LaunchScreen.xib */,
+				935F438D1A7420DC00B6F0C0 /* Supporting Files */,
+				9339B6B21A802E8300C08806 /* SKEmitterNode+Extensions.h */,
+				9339B6B41A802ED900C08806 /* SKEmitterNode+Extensions.m */,
+				9339B6B61A80317A00C08806 /* obstacleExplode.sks */,
+				9339B6B81A80321100C08806 /* shipExplode.sks */,
 			);
 			path = Foo;
 			sourceTree = "<group>";
@@ -200,12 +217,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9339B6B01A802D4B00C08806 /* thrust.sks in Resources */,
 				935F43C31A754BD900B6F0C0 /* laserbolt.mp3 in Resources */,
 				935F43C91A754E4E00B6F0C0 /* asteroidsplat.mp3 in Resources */,
+				9339B6B91A80321100C08806 /* shipExplode.sks in Resources */,
 				935F43CB1A7553A800B6F0C0 /* shipboom2.m4a in Resources */,
 				935F43C71A754E1F00B6F0C0 /* attribs.txt in Resources */,
+				9339B6B11A802D4B00C08806 /* spark.png in Resources */,
 				935F43A31A7420DC00B6F0C0 /* LaunchScreen.xib in Resources */,
 				935F43A01A7420DC00B6F0C0 /* Images.xcassets in Resources */,
+				9339B6B71A80317A00C08806 /* obstacleExplode.sks in Resources */,
 				935F43981A7420DC00B6F0C0 /* GameScene.sks in Resources */,
 				935F439E1A7420DC00B6F0C0 /* Main.storyboard in Resources */,
 			);
@@ -219,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				935F43CE1A75551A00B6F0C0 /* StarField.m in Sources */,
+				9339B6B51A802ED900C08806 /* SKEmitterNode+Extensions.m in Sources */,
 				935F439B1A7420DC00B6F0C0 /* GameViewController.m in Sources */,
 				935F43BA1A753CC900B6F0C0 /* GameOver.m in Sources */,
 				935F43931A7420DC00B6F0C0 /* AppDelegate.m in Sources */,

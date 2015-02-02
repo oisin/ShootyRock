@@ -10,14 +10,12 @@
 #import "GameOver.h"
 #import "StarField.h"
 #import "HUDNode.h"
+#import "SKEmitterNode+Extensions.h"
 
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
-    
-    self.shootSound = [SKAction playSoundFileNamed:@"laserbolt.mp3" waitForCompletion:NO];
-    self.obstacleExplodeSound = [SKAction playSoundFileNamed:@"asteroidsplat.mp3" waitForCompletion:NO];
-    self.shipExplodeSound = [SKAction playSoundFileNamed:@"shipboom2.m4a" waitForCompletion:NO];
+    [self loadOnceOnlyItems];
     
     self.backgroundColor = [SKColor blackColor];
     self.size = view.bounds.size;
@@ -36,7 +34,28 @@
     [self addSpaceship];
 }
 
-- (void)willMoveFromView:(SKView *)view {
+-(void)loadOnceOnlyItems {
+    if (!self.shootSound) {
+        self.shootSound = [SKAction playSoundFileNamed:@"laserbolt.mp3" waitForCompletion:NO];
+    }
+    
+    if (!self.obstacleExplodeSound) {
+        self.obstacleExplodeSound = [SKAction playSoundFileNamed:@"asteroidsplat.mp3" waitForCompletion:NO];
+    }
+    
+    if (!self.shipExplodeSound ) {
+        self.shipExplodeSound = [SKAction playSoundFileNamed:@"shipboom2.m4a" waitForCompletion:NO];
+    }
+    
+    if (!self.shipExplodeTemplate) {
+        self.shipExplodeTemplate = [SKEmitterNode foo_nodeWithFile:@"shipExplode.sks"];
+    }
+    if (!self.obstacleExplodeTemplate) {
+        self.obstacleExplodeTemplate = [SKEmitterNode foo_nodeWithFile:@"obstacleExplode.sks"];
+    }
+}
+
+-(void)willMoveFromView:(SKView *)view {
     [self.view removeGestureRecognizer:self.tapRecognizer];
     self.tapRecognizer = nil;
 }
@@ -47,6 +66,10 @@
     ship.size = CGSizeMake(40, 40);
     ship.name = @"ship";
     [self addChild:ship];
+    
+    SKEmitterNode *thrust = [SKEmitterNode foo_nodeWithFile:@"thrust.sks"];
+    thrust.position = CGPointMake(0, -20);
+    [ship addChild:thrust];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -111,6 +134,10 @@
             [ship removeFromParent];
             [obstacle removeFromParent];
             [self runAction:self.shipExplodeSound];
+            SKEmitterNode *explosion = [self.shipExplodeTemplate copy];
+            explosion.position = ship.position;
+            [explosion foo_dieOutInDuration:0.3];
+            [self addChild:explosion];
             [self endGame];
         }
         
@@ -119,6 +146,12 @@
                 [photon removeFromParent];
                 [obstacle removeFromParent];
                 [self runAction:self.obstacleExplodeSound];
+                
+                SKEmitterNode *explosion = [self.obstacleExplodeTemplate copy];
+                explosion.position = obstacle.position;
+                [explosion foo_dieOutInDuration:0.1];
+                [self addChild:explosion];
+                
                 HUDNode *hud = (HUDNode*)[self childNodeWithName:@"hud"];
                 NSInteger score = 10 + hud.elapsedTime;
                 [hud addPoints:score];
