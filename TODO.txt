@@ -1,0 +1,29 @@
+fix bug where firing continues after ship explosion
+
+change graphics for ship and asteroids are now alien drones
+
+make explosions less particle emittery
+
+local high score table
+
+easy and hard levels 
+
+demo screen
+
+cheap analytics with amazon
+
+icon
+
+test on ipads
+
+make the touch control less hassley so you can see your ship
+
+add alien ship crossing at speed
+
+add alien ship bomb drop
+
+tighten up sprite collision with obstacles, smaller rects
+
+remote high score storage
+
+back story :)
